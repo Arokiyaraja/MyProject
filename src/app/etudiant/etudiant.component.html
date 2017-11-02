@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Important : les 3 lignes suivantes doivent se trouver en premier -->
+ <!-- <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Grille</title>
+  <!-- CSS de boostrap -->
+  <!--<link href="lib/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
+     <link href="css/font-awesome.css" rel="stylesheet">
+    </head> 
+    <body class="container"> -->
+
+<div> Liste des étudiants</div>
+<table border="1">
+	<thead>
+			<tr>
+				<th>Nom</th>
+				<th>Prénom</th>
+				<th>Age</th>
+				<th>Admis</th>
+			</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let etudiant of etudiants">
+			<td>{{etudiant.nom}}</td>
+			<td>{{etudiant.prenom}}</td>
+			<td>{{etudiant.age}}</td>
+			<td>{{etudiant.admis}}</td>
+		</tr></tbody></table>
+		<!-- <tr>
+			<td>Louis</td>
+			<td>Smith</td>
+			<td>15</td>
+			<td>NON</td>
+		</tr>
+		<tr>
+			<td>Robin</td>
+			<td>Jack</td>
+			<td>10</td>
+			<td>NON</td>
+		</tr>
+		<tr>
+			<td>Francois</td>
+			<td>Gerard</td>
+			<td>28</td>
+			<td>OUI</td>
+		</tr> -->
+	
+
+<br>
+<div id="one">Liste des étudiants Admis</div>
+	<table border="1">
+	<thead>
+			<tr >
+				<th>Nom</th>
+				<th>Prénom</th>
+				<th>Age</th>
+				<th>Admis</th>
+			</tr>
+	</thead>
+	<tbody *ngFor="let etudiant of etudiants">
+		<tr *ngIf="etudiant.age > 15">
+			<td>{{etudiant.nom}}</td>
+			<td>{{etudiant.prenom}}</td>
+			<td>{{etudiant.age}}</td>
+			<td>{{etudiant.admis}}</td>
+		</tr></tbody></table>
+
+<br>
+
+<div id="two">Liste des étudiants Non Admis</div>
+	<table border="1">
+	<thead>
+			<tr >
+				<th>Nom</th>
+				<th>Prénom</th>
+				<th>Age</th>
+				<th>Admis</th>
+			</tr>
+	</thead>
+	<tbody *ngFor="let etudiant of etudiants">
+		<tr *ngIf="etudiant.age  < 25">
+			<td>{{etudiant.nom}}</td>
+			<td>{{etudiant.prenom}}</td>
+			<td>{{etudiant.age}}</td>
+			<td>{{etudiant.admis}}</td>
+		</tr></tbody></table>
+
+
+
+<!-- <div class="panel panel-info">
+	<div class="panel-heading">liste des etudiants Admis</div>
+	<div class="panel-body">
+		<ul>
+			<li *ngFor = "let etudiant of etudiants">
+				<span *ngIf="etudiant.age > 9">
+					{{etudiant.nom}} avec une age de {{etudiant.age}}
+				</span>
+			</li>
+		</ul>
+	</div></div>  -->
+	<!-- <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+</body>
+</html>  -->

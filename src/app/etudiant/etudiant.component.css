@@ -1,0 +1,22 @@
+table
+{
+	border: 1px solid black;
+	width: 50%;
+	text-align: center;
+}
+thead
+{
+	background-color: lightblue;
+}
+tbody
+{
+	font-weight: normal;
+}
+div
+{
+	background-color: yellow;
+}
+#one
+{
+	background-color: lightpink;
+}
